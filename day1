@@ -1,0 +1,61 @@
+Basic Concept
+
+An NMOS transistor controls current flow between the drain (D) and source (S) using the gate voltage (VGS).
+
+VGS → controls how strongly the channel conducts.
+
+VDS → controls how much voltage is dropped across the channel.
+
+ID → is the resulting drain current.
+
+📉 Three Operating Regions
+1. Cutoff Region (VGS < Vth)
+
+Condition: Gate voltage is below the threshold voltage (Vth).
+
+Channel not formed, so no current flows.
+
+Drain current (ID ≈ 0).
+
+Acts like an open switch.
+
+ID = 0
+
+2. Linear (Ohmic) Region (VGS > Vth and VDS < VGS − Vth)
+
+Channel is formed and acts like a variable resistor.
+
+Current increases linearly with VDS.
+
+Transistor behaves like a voltage-controlled resistor.
+
+ID = μn Cox (W/L) [(VGS − Vth) VDS − (VDS² / 2)]
+
+3. Saturation Region (VDS ≥ VGS − Vth)
+
+Channel is pinched off near the drain.
+
+Increasing VDS further doesn’t increase ID much — it saturates.
+
+Used for amplifier or switch operation.
+
+ID(sat) = (1/2) μn Cox (W/L) (VGS − Vth)²
+
+📈 Typical ID vs. VDS Curve
+ID  |         Saturation
+    |          _________
+    |         /
+    |        /
+    |_______/____________  → VDS
+       Linear Region
+
+
+Each curve corresponds to a different VGS value.
+
+Higher VGS → higher ID.
+
+🔍 Summary Table
+Region	Condition	Behavior	ID Expression
+Cutoff	VGS < Vth	Off	0
+Linear	VGS > Vth, VDS < VGS−Vth	Resistive	μnCox(W/L)[(VGS−Vth)VDS−VDS²/2]
+Saturation	VDS ≥ VGS−Vth	Constant (Saturated)	(1/2)μnCox(W/L)(VGS−Vth)²
